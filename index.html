@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="./">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+
+  <!-- SEO Meta Tags -->
+  <title>WajidTechs - Smart Web & App Solutions | wajidtechs.com</title>
+  <meta name="description" content="WajidTechs builds modern web and mobile applications with smart design, performance, and innovation. Visit us at wajidtechs.com.">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="WajidTechs - Smart Web & App Solutions">
+  <meta property="og:description" content="Explore innovative web & mobile app solutions with WajidTechs. Visit wajidtechs.com for more.">
+  <meta property="og:url" content="https://wajidtechs.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="icons/Icon-192.png">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="wajidtechs">
+  <meta name="apple-mobile-web-app-title" content="WajidTechs">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>wajidtechs</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    /* Full page gradient background */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #E3E4E3, #EDC52F);
+    }
+
+    /* Loader spinner */
+    .loader {
+      border: 6px solid #E3E4E3;       /* Light gray border */
+      border-top: 6px solid #EDC52F;   /* Yellow highlight */
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Hide loader when Flutter takes over */
+    body.flutter-loaded .loader {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <!-- Loader before Flutter boots -->
+  <div class="loader"></div>
+
+  <!-- Flutter App -->
+  <script src="flutter_bootstrap.js" async onload="document.body.classList.add('flutter-loaded')"></script>
 </body>
 </html>
