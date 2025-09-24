@@ -80080,7 +80080,7 @@ return A.dx(A.b([b.b<600?A.dx(A.b([A.dx(B.nb,B.ax,B.T,B.a1),B.bl,A.dx(B.n9,B.ax,
 $S:503}
 A.IJ.prototype={
 J(a){var s=null
-return new A.xT(B.j_,"Responsive Carousel Demo",A.te(s,s,B.bu,B.CT,s),!1,s)}}
+return new A.xT(B.j_,"Wajidtechs Build Your Digital World",A.te(s,s,B.bu,B.CT,s),!1,s)}}
 A.x6.prototype={
 ad(){var s,r,q=$.hD,p=(q==null?$.hD=$.uR():q).oF("[DEFAULT]")
 A.e2(p,$.n2(),!0)
